@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{%block title%}Post Details{%endblock%}
+{%block content%}
+
+<div class="jumbotron  ">
+   		 <h1 class="display-4">{{ post_details.title }}</h1><hr>
+   		 <p class="lead">      {{ post_details.content }}</p>
+   		 <hr>
+   		 <p class="lead"><small>created at {{post_details.created_at}}</small> </p> 
+   		 <p class="lead"><small>created by {{post_details.author}}</small> </p>
+   		 <a href="/posts/update/{{ post_details.id }}" class="btn btn-primary">Update </a>
+   		 <a href="/posts/confirm_delete/{{ post_details.id }}" class="btn btn-danger">Delete </a>
+</div>
+
+{%endblock%}
